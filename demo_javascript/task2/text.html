@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="message">
+        <button type="button" onclick="display()">display</button>
+        <p id="htm"></p>
+        <h1 id="text1"></h1>
+    </form>
+
+    <script>
+        function display(){
+            let a=document.getElementById("message").value;
+            document.getElementById("htm").innerHTML="<b>message:</b>"+a;
+            document.getElementById("text1").innerText="message:"+a;
+        }
+    </script>
+</body>
+</html>

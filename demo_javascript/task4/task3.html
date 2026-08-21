@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <h1>age</h1>
+        <input type="number" id="age" placeholder="age">
+        <input type="text" id="yesno"placeholder="yes/now">
+        <button onclick="check()" type="button">check</button>
+        <h1 id="display"></h1>
+    </form>
+
+    <script>
+        function check(){
+            let age=Number(document.getElementById("age").value);
+            let yesno=document.getElementById("yesno").value;
+
+            if(age>=18){
+                if(yesno=="yes"){
+                    document.getElementById("display").innerHTML="You can drive";
+                }
+                
+                else if(yesno=="no"){
+                    document.getElementById("display").innerHTML="You can't drive";
+                }
+                
+                else{
+                    document.getElementById("display").innerHTML="invalid type";
+                }
+            }
+            else{
+                document.getElementById("display").innerHTML="not eligible";
+            }
+        }
+    </script>
+</body>
+</html>

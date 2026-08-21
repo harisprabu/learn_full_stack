@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hello">hello</h1>
+    <button onclick="increase()">A+</button>
+    <button onclick="decrease()">A-</button>
+    <button onclick="normal()">reset</button>
+
+    <script>
+        function increase(){
+            document.getElementById("hello").style.fontSize="14px";
+        }
+        function decrease(){
+            document.getElementById("hello").style.fontSize="10px";
+        }
+        function normal(){
+            document.getElementById("hello").style.fontSize="12px";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mark</title>
+</head>
+<body>
+    <form action="">
+        <h3>mark</h3>
+        <input type="number" id="grade">
+        <button type="button" onclick="mark()">check</button>
+        <h1 id="display"></h1>
+
+        <script>
+            function mark(){
+                let a=document.getElementById("grade").value;
+                if(a>35 && a<=100){
+                    document.getElementById("display").innerText="pass";
+                }
+
+                else{
+                    document.getElementById("display").innerText="fail";
+                }
+            }
+
+        </script>
+    </form>
+</body>
+</html>

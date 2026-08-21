@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <h3>delivery charge</h3>
+        <input type="number" id="num" placeholder="number">
+        <button onclick="price()" type="button">price</button>
+        <h3 id="hi"></h3>
+    </form>
+
+    <script>
+        function price(){
+            let amount=Number(document.getElementById("num").value);
+            if(amount>1000){
+                document.getElementById("hi").innerHTML="free delivery";
+            }
+
+            else{
+                amount+=50
+                document.getElementById("hi").innerHTML="Delivery charge additional 50rs"+"<br>"+amount;
+            }
+        }
+    </script>
+</body>
+</html>

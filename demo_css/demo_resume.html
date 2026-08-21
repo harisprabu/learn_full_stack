@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1, h1~h3, h3+p{        /* ~ it is general sbiling used for next others to used. <------> + is is direct sibling that is next to that element */
+            color: yellowgreen;
+        }
+
+        .profession, .education, .skill, .certification{
+            background-color: aqua;
+        }
+
+        .experience{
+            background-color: rgb(220, 124, 0);
+        }
+
+        /* ol li{
+            color: blue;
+        }
+
+        ul>li{
+            color: rgb(255, 0, 0);
+        } */
+
+        tr:nth-child(odd){
+            background-color: rgb(198, 193, 193);
+        }
+
+        tr:nth-child(even){
+            background-color: aliceblue;
+        }
+
+        ul>li:nth-child(3n){
+        color: rgb(255, 0, 0);
+        }
+        ol>li:nth-child(odd){
+        color: rgb(0, 30, 255);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Haris Prabu</h1>
+        <h3>6383097024</h3>
+        <h3>harisprabu2004@gmail.com</h3>
+        <p>Address: 6/579 Bharathidasan street, Lakshmi Nagar, Virudhunagar</p>
+
+    </center>
+
+    <div class="profession">
+        <h5>Carrier</h5>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, voluptas? Deserunt necessitatibus non dolorem nobis quo optio, inventore iure ut fugit amet quae ducimus fuga debitis neque blanditiis dignissimos perferendis?
+        Voluptatem molestias numquam quaerat maxime nisi, deleniti modi aliquid minima amet quia quam! Nemo quod corrupti omnis mollitia eos perferendis placeat sunt voluptatibus hic architecto temporibus, atque suscipit libero nobis.
+        Impedit explicabo ea quo atque velit doloribus perferendis sit. Numquam non ad officiis fugit quibusdam voluptas iure, deleniti minima quidem dignissimos eius aspernatur ipsum sed blanditiis laboriosam natus provident reprehenderit?</P>
+    </div>
+
+    <div class="experience">
+        <h5>Experience</h5>
+        <h6>ScopeTech Solution</h6>
+        <p>Currently Purshing a Junior Software Developer intenship. Tech stacks are Java, Springboot, HTML, css, javascript, react.js</p>
+    </div>
+
+    <div class="education">
+        <h5>Education</h5>
+        <table align="center" border="1" height="150px" width="500px" style="border-collapse: collapse;">
+            <tr>
+                <th>S No.</th>
+                <th>Course</th>
+                <th>Year</th>
+                <th>Percentage</th>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>B.Tech Computer Science</td>
+                <td>2026</td>
+                <td>73%</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>12th</td>
+                <td>2022</td>
+                <td>74%</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>10th</td>
+                <td>2020</td>
+                <td>65%</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="skill">
+        <h5>Skills</h5>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>Core Java</li>
+        </ul>
+    </div>
+
+    <div class="certification">
+        <h5>Certifications</h5>
+        <ol>
+            <li>Python Intership at Pantech Solutions</li>
+            <li>Web Development course at Corizo tech</li>
+            <li>Java Intenship at ScopeTech Software Solutions</li>
+        </ol>
+    </div>
+</body>
+</html>

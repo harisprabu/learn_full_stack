@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <h1>salary</h1>
+        <input type="number" id="score" placeholder="score">
+        <input type="number" id="exp" placeholder="experience">
+        <button onclick="check()" type="button">check</button>
+        <h1 id="display"></h1>
+    </form>
+
+    <script>
+        function check(){
+            let score=Number(document.getElementById("score").value);
+            let exp=Number(document.getElementById("exp").value);
+            let salary=100;
+
+            if(score>=85 && score<=100){
+                if(exp>=5){
+                    salary+=20000;
+                    document.getElementById("display").innerHTML="your salary is:"+salary;
+                }
+                
+                else if(exp==3 || exp==4){
+                    salary+=10000;
+                    document.getElementById("display").innerHTML="your salary is:"+salary;
+                }
+                
+                else if(exp==2 || exp==1){
+                    salary+=5000;
+                    document.getElementById("display").innerHTML="your salary is:"+salary;
+                }
+                
+                else{
+                    document.getElementById("display").innerHTML="your salary is:"+salary;
+                }
+            }
+            else if(score<85 && score>0){
+                document.getElementById("display").innerHTML="you are in training period and your salary is: 7000";                
+            }
+            
+            else{
+                document.getElementById("display").innerHTML="rejected";                
+            }
+        }
+    </script>
+</body>
+</html>

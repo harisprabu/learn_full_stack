@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            height: 100vh   ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contain{
+            height: 350px;
+            width: 350px;
+            border: 2px solid black;
+            border-radius: 30px;
+            transition: 0.8s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="contain" onclick="divi()" ondblclick="divi2()" id="divi"></div>
+    </div>
+
+    <script>
+        function divi(){
+            document.getElementById("divi").style.backgroundColor="green";
+            document.getElementById("divi").style.transform="scale(1.4)";
+            
+            // document.getElementById("divi").style.backgroundColor="blue";
+        }
+        
+        function divi2(){
+            document.getElementById("divi").style.backgroundColor="red";
+            document.getElementById("divi").style.transform="scale(1)";
+        }
+    </script>
+</body>
+</html>

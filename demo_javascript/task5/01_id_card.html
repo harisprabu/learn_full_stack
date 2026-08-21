@@ -1,0 +1,175 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .box{
+            background-color: rgb(130, 130, 130);
+            height: 100vh;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .inputs{
+            background-color: rgb(243, 242, 242);
+            height: 450px;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 40px;
+            box-shadow: 0 0 30px rgba(63, 63, 63, 0.463);
+        }
+
+        table label{
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        table input, select{
+            height: 32px;
+            padding-left: 10px;
+            width: 220px;
+            border: 2px solid gray;
+            border-radius: 10px;
+        }
+        
+
+        table button{
+            color: rgb(101, 99, 99);
+            background-color: white;
+            height: 40px;
+            width: 120px;
+            border-radius: 40px;
+            border: 2px solid gray;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        table button:hover{
+            transform: scale(1.1);
+            color: white;
+            background-color: gray;
+            border: 1px solid white;
+        }
+
+        .box2{
+            height: 100vh;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 1s;
+        }
+
+        .idca{
+            height: 100vh;
+            width: 600px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover ;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 150px;
+            gap: 20px;
+        }
+
+        .idca h1{
+            font-size: 30px;
+            color: rgb(101, 99, 99);
+        }
+        
+        .idca h3{
+            color: rgb(101, 99, 99);
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div class="container">
+            <!-- <input type="text" id="name">
+            <input type="text" id="course">
+            
+             -->
+            <div class="box">
+            <div class="inputs">
+                    <h1 align="center">STUDENT DETAIL</h1> <br>
+                    <table height="300px" width="400px">
+                        <tr>
+                            <td><label for="">Name:</label></td>
+                            <td><input type="text" id="name" placeholder="Enter Name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Course:</label></td>
+                            <td><select name="" id="course">
+                                <option value="0">--select--</option>
+                                <option value="java">Java</option>
+                                <option value="python">Python</option>
+                            </select>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Mobile:</label></td>
+                            <td><input type="text" id="mobile" placeholder="Enter Name"></td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="2"><button onclick="idcard()" type="button">display</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="box2">
+                <div id="idshow" class="idca">
+                    <h1 id="name_dis"></h1>
+                    <h3 id="course_dis"></h3>
+                    <h3 id="mobile_dis"></h3>
+
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        function idcard(){
+            let name=document.getElementById("name").value;
+            let course=document.getElementById("course").value;
+            let mobile=document.getElementById("mobile").value;
+
+            let divs=document.getElementById("idshow");
+            document.getElementById("name_dis").innerHTML="Name:"+name;
+            document.getElementById("course_dis").innerHTML="Course:"+course;
+            document.getElementById("mobile_dis").innerHTML="Mobile:"+mobile;
+            let divs_course=document.getElementById("course_dis");
+            let divs_mobile=document.getElementById("mobile_dis");
+            // divs.innerHTML="<span><b>name:</b></span>"+name+"<br><span><b>course:</b></span>"+course+"<br><span><b>mobile</b></span>"+mobile;
+            divs.style.backgroundImage="url(id_card.jpg)";
+        }
+    </script>
+</body>
+</html>

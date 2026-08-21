@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <h1>interview</h1>
+    <input type="number" id="a" placeholder="mark">
+    <input type="number" id="b" placeholder="mark">
+    <input type="number" id="c" placeholder="mark">
+    <button onclick="check()" type="button">check</button>
+    <h1 id="display"></h1>
+    </form>
+
+    <script>
+        function check(){
+            let a=Number(document.getElementById("a").value);
+            let b=Number(document.getElementById("b").value);
+            let c=Number(document.getElementById("c").value);
+
+            if(a>=50 && a<=100){
+                if(b>=65 && b<=100){
+                    if(c>=75 && c<=100){
+                        document.getElementById("display").innerHTML="you cleared 3 rounds next hr round";
+                    }
+                    
+                    else{
+                        document.getElementById("display").innerHTML="rejected at round 3";
+                    }
+                }
+                else{
+                    document.getElementById("display").innerHTML="rejected at round 2";
+                }
+            }
+            else{
+                document.getElementById("display").innerHTML="rejected at round 1";
+            }
+        }
+    </script>
+</body>
+</html>

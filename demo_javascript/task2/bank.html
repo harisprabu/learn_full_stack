@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <form action="">
+        <input type="number" id="age">                                                  
+        <input type="number" id="salary">
+        <button type="button" onclick="hi()">tot</button>
+        <p id="dis"></p>
+        <!--    1. html form
+        3. onclick nu oru event
+        4.function
+        2. button la call penanum
+        5.getelementbyid
+          -->
+    </form>
+
+    <script>
+        function hi(){
+            let a=Number(document.getElementById("age").value);
+            let b=Number(document.getElementById("salary").value);
+            if(a>=21 && b>=25000){                                                              
+                document.getElementById("dis").innerHTML="accepted";
+            }
+            else{
+                document.getElementById("dis").innerHTML="rejected";
+            }
+        }
+    </script>
+</body>
+</html>

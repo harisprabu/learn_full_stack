@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button{
+            height: 40px;
+            width: 150px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="contain">
+        <button onclick="fun()" ondblclick="double()">change</button>
+    </div>
+
+    <script>
+        function fun(){
+            document.getElementById("contain").style.backgroundColor="black";
+        }
+        
+        function double(){
+            document.getElementById("contain").style.backgroundColor="yellow";
+
+        }
+    </script>
+</body>
+</html>

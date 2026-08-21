@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            background-color: rgb(192, 194, 195);
+            height: 500px;
+            width: 500px;
+        }
+
+        table{
+            height: 300px;
+            width: 450px;
+            background-color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="container">
+    <h1>Student Registration form</h1><br><br>
+    <form action="">
+        <table>
+            <tr>
+                <td><label for="">Name:</label></td>
+                <td><input type="text" placeholder="enter name"></td>
+            </tr>
+            <tr>
+                <td><label for="">Email:</label></td>
+                <td><input type="email" placeholder="enter email"></td>
+            </tr>
+            <tr>
+                <td><label for="">Mobile No.:</label></td>
+                <td><input type="text" placeholder="enter mobile number"></td>
+            </tr>
+            <tr>
+                <td><label for="c1">Gender:</label></td>
+                <td><input type="radio" name="c1">Male <input type="radio" name="c1">Female</td>
+            </tr>
+            <tr>
+                <td><label for="">Courses:</label></td>
+                <td><select name="" id="">
+                        <option value="">--select--</option>
+                        <option value="">Java</option>
+                        <option value="">Python</option>
+                        <option value="">Node.js</option>
+                        <option value="">React.js</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit"> <input type="reset"></td>
+            </tr>
+            
+        </table>
+        </div>
+        </center>
+    </form>
+</body>
+</html>

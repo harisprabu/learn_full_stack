@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        button{
+            height: 50px;
+            width: 120px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="div">
+        <button onclick="red()">red</button>
+        <button onclick="green()">green</button>
+        <button onclick="blue()">blue</button>
+    </div>
+
+    <script>
+        function red(){
+            document.getElementById("div").style.backgroundColor="red";
+        }
+        function green(){
+            document.getElementById("div").style.backgroundColor="green";
+        }
+        function blue(){
+            document.getElementById("div").style.backgroundColor="blue";
+        }
+    </script>
+</body>
+</html>

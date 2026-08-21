@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="p_name">
+        <input type="number" id="p_price">
+        <input type="number" id="p_quantity">
+        <button type="button" onclick="hi()">total</button>
+        <p id="dis"></p>
+    </form>
+
+    <script>
+        function hi(){
+            let a=Number(document.getElementById("p_name").value);
+            let b=Number(document.getElementById("p_price").value);
+            let c=document.getElementById("p_quantity").value;
+            let tot=b*c;
+            // document.write("product name"+a+"<br>");
+            // document.write("product price"+b+"<br>");
+            // document.write("product quantity"+c+"<br>");
+            // document.write("price total"+tot);
+            document.getElementById("dis").innerHTML="product Name:"+tot;
+        }
+    </script>
+</body>
+</html>

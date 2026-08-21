@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(bmi.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container{
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .box{
+            gap: 30px;
+            display: flex;
+            flex: 1;
+        }
+
+        .container input{
+            height: 35px;
+            width: 200px;
+            padding-left: 10px;
+        }
+        
+        .container button{
+            height: 40px;
+            width: 150px;
+            padding-left: 10px;
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            border: 1px solid blue;
+            border-radius: 20px;
+        }
+
+        .out{
+            flex: 1;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="flex: 3; font-size: 50px; display: flex; align-items: center;">Your BMI</h1>
+        <div class="box">
+            <input type="number" id="height" placeholder="height (m)">
+            <input type="number" id="weight" placeholder="weight (kg)">
+            <button onclick="bmi()">Check BMI</button>
+            <br>
+        </div>
+        <h2 class="out" id="display"></h2>
+    </div>
+
+    <script>
+        function bmi(){
+            let height=Number(document.getElementById("height").value);
+            let weight=Number(document.getElementById("weight").value);
+            let bmi=Math.ceil(weight/(height*height))
+            document.getElementById("display").innerHTML="Your BMI:"+bmi;
+        }
+    </script>
+</body>
+</html>

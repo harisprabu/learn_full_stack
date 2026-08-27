@@ -40,10 +40,17 @@
             font-weight: bold;
             border: 1px solid blue;
             border-radius: 20px;
+            transition: 0.4s;
         }
 
         .out{
             flex: 1;
+        }
+
+        button:hover{
+            background-color: rgb(237, 234, 230);
+            color: rgb(17, 0, 255);
+            transform: scale(1.03);
         }
 
 
@@ -51,7 +58,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 style="flex: 3; font-size: 50px; display: flex; align-items: center;">Your BMI</h1>
+        <h1 style="flex: 3; font-size: 50px; display: flex; align-items: center; ">Your BMI</h1>
         <div class="box">
             <input type="number" id="height" placeholder="height (m)">
             <input type="number" id="weight" placeholder="weight (kg)">

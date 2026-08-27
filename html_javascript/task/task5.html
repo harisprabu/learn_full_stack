@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sty.css">
+    
+</head>
+<body>
+    <div class="containers">
+        <div class="box">
+            <br>
+            <br><br><br><br>
+            <h1 style="font-size: 40px; color: rgb(129, 73, 1);">Bank Loan Approval</h1> <br>
+            <form action="">
+            <table>
+                <tr>
+                    <td><label for="">Salary:</label></td>
+                    <td><input type="number" id="salary" placeholder="Enter salary"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Age:</label></td>
+                    <td><input type="number" id="age" placeholder="Enter age"></td>
+                </tr>
+            
+                <tr>
+                    <td colspan="2" align="center"><button type="button" onclick="loan()">Total Marks</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h1 id="display"></h1></td>
+                </tr>
+
+            </table>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function loan(){
+            let salary=Number(document.getElementById("salary").value);
+            let age=Number(document.getElementById("age").value);
+            
+            if(salary>=25000){
+                if(age>=21){
+                    document.getElementById("display").innerHTML="Loan Approved !"
+                }
+                
+                else{
+                    document.getElementById("display").innerHTML="Age Not Eligible !"
+                }
+            }
+            
+            else{
+                document.getElementById("display").innerHTML="Salary Not Eligible !"
+            }
+    
+        }
+
+    </script>
+</body>
+</html>

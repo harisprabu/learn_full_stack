@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="get" >
+    <button onclick="insert()">add</button>
+    <button onclick="remove()">remove</button>
+    <p id="show"></p>
+
+    <script>
+        let a=[];
+        function insert(){
+            let get=document.getElementById("get").value;
+            a.push(get)
+            for(let i=0;i<a.length;i++){
+                document.getElementById("show").innerHTML=a[i];
+                console.log(a[i])
+                let get=document.getElementById("get").value='';
+            }
+        }
+
+        function remove(){
+            let rem=document.getElementById("get").value;
+            let z=a.indexOf(rem)
+
+            for(let i=0;i<a.length;i++){
+                a.splice(z,1)
+                document.getElementById("show").innerHTML=a[i];
+                console.log(a[i])
+            }
+        }
+        
+       
+    </script>
+</body>
+</html>

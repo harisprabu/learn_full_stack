@@ -4,44 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="sty.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
     
     <style>
-        .container{
-            height: 100vh;
-            width: 100%;
-            background-color: antiquewhite;
-        }
+        
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="containers">
         <div class="box">
-            <h1>Simple Calci</h1>
+            <h1 style="font-size: 50px; color: rgb(129, 73, 1);">Simple Calci</h1> <br>
             <form action="">
-            <table border="1" height="300px" width="500px">
+            <table>
                 <tr>
                     <td><label for=""> Intrest:</label></td>
-                    <td><input type="number" id="intrest"></td>
+                    <td><input type="number" id="intrest" placeholder="Enter Intrest"></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td><label for=""> Rate:</label></td>
+                    <td><input type="number" id="rate" placeholder="Enter Rate"></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td><label for=""> Time:</label></td>
+                    <td><input type="number" id="time" placeholder="Enter Time"></td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2" align="center"><button type="button" onclick="intrestdis()">Intrest Check</button></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td colspan="2"><h1 id="display"></h1></td>
                 </tr>
 
             </table>
             </form>
-            
         </div>
-
     </div>
+
+    <script>
+        function intrestdis(){
+            let intrest=Number(document.querySelector("intrest").value);
+            let rate=Number(document.getElementById("rate").value);
+            let time=Number(document.getElementById("time").value);
+    
+            let num=(intrest*rate*time)/100;
+    
+            document.getElementById("display").innerHTML="Intrest is:"+num;
+        }
+
+    </script>
 </body>
 </html>

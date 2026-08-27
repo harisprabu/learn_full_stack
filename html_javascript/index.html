@@ -26,9 +26,8 @@
         function remove(){
             let rem=document.getElementById("get").value;
             let z=a.indexOf(rem)
-
-            for(let i=0;i<a.length;i++){
                 a.splice(z,1)
+                for(let i=0;i<a.length;i++){
                 document.getElementById("show").innerHTML=a[i];
                 console.log(a[i])
             }

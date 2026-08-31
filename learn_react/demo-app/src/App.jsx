@@ -7,11 +7,18 @@ import Gallery from './Gallery'
 import Contact from './Contact'
 import NavBar from './NavBar'
 import Header from '../Header'
+import Props from './Props'
+import Map from './Map'
 
 
 function App() {
+   let fruname1={name: "apple",origin: "banglore"}
+   let fruname2={name: "banana",origin: "banglore"}
+   let fruname3={name: "orange",origin: "banglore"}
+   let price=[200,210,250]
+
    return <>
-   <Header/>
+   {/* <Header/>
 
    <BrowserRouter>
 
@@ -23,7 +30,14 @@ function App() {
       <Route path='/gallery' element={<Gallery/>}/>
       <Route path='/contact' element={<Contact/>}/>
    </Routes>
-   </BrowserRouter>
+   </BrowserRouter> */}
+
+   {/* <Props name="apple" origin="delhi"  />                                      this is the props */}
+   {/* <Props a={fruname1} b={price} />
+   <Props a={fruname2} b={price} />
+   <Props a={fruname3} b={price} /> */}
+
+   <Map/>
    </>
 
 

@@ -3,37 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Array Add Remove</title>
 </head>
+
 <body>
-    <input type="text" id="get" >
-    <button onclick="insert()">add</button>
-    <button onclick="remove()">remove</button>
+
+    <input type="text" id="get">
+
+    <button onclick="insert()">Add</button>
+    <button onclick="remove()">Remove</button>
+
     <p id="show"></p>
 
     <script>
-        let a=[];
-        function insert(){
-            let get=document.getElementById("get").value;
-            a.push(get)
-            for(let i=0;i<a.length;i++){
-                document.getElementById("show").innerHTML=a[i];
-                console.log(a[i])
-                let get=document.getElementById("get").value='';
-            }
+        let a = [];
+
+        function insert() {
+            let get = document.getElementById("get").value;
+            a.push(get);
+            document.getElementById("show").innerHTML = a;
+            console.log(a);
+            document.getElementById("get").value = "";
         }
 
-        function remove(){
-            let rem=document.getElementById("get").value;
-            let z=a.indexOf(rem)
-                a.splice(z,1)
-                for(let i=0;i<a.length;i++){
-                document.getElementById("show").innerHTML=a[i];
-                console.log(a[i])
-            }
+        function remove() {
+            let rem = document.getElementById("get").value;
+            let z = a.indexOf(rem);
+                a.splice(z, 1);
+                document.getElementById("show").innerHTML = a;
+                console.log(a);
+            document.getElementById("get").value = "";
         }
-        
-       
     </script>
+
 </body>
 </html>

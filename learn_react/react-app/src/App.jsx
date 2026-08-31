@@ -4,11 +4,11 @@
 // import Age from "./Age";
 // import Footer from "./Footer/Footer";
 // import Name from "./Name";
-import Display from "./Task/Display";
-import Resetd from "./Task/Resetd";
-import CountBut from "./Task/CountBut";
-import CharCount from "./Task/CharCount";
-import UserPass from "./Task/UserPass";
+// import Display from "./Task/Display";
+// import Resetd from "./Task/Resetd";
+// import CountBut from "./Task/CountBut";
+// import CharCount from "./Task/CharCount";
+// import UserPass from "./Task/UserPass";
 
 const App = ()=>{
   return <>
@@ -21,11 +21,13 @@ const App = ()=>{
     <Count/>
     <Age/>
     <Name/> */}
-    <Display/>
+    {/* <Display/>
     <CountBut/>
     <Resetd/>
     <CharCount/>
-    <UserPass/>
+    <UserPass/> */}
+
+    
     </>
 }
 export default App

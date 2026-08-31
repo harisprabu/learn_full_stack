@@ -37,7 +37,9 @@
 
 
 //factorial
-let a=[1,2,3,4,5,6]
-for(let i=1; i<a.length; i++){
-    
-}
+let a=[10,5,8,9,4,11];
+let b= a.sort((x,y)=>x-y)
+console.log("array sorted: "+b)
+let c=b.length-1
+console.log("least value: "+ b.slice(0,1))
+console.log("highest value: "+b.slice(c))

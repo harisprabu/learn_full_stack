@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST </title>
+    <style>
+        textarea{
+            height: 200px;
+            width: 500px;
+        }
+
+        button{
+            height: 40px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="field">
+            <textarea name="" id="userinput"></textarea>
+            <button id="useraddbtn">Add</button>
+            <p id="error"></p>
+        </div>
+    </div>
+    <script>
+        let u_input = document.getElementById("userinput");
+        let u_press = document.getElementById("useraddbtn");
+        let err = document.getElementById("error");
+        
+
+        
+        let count = 0;
+        u_press.addEventListener("click",()=>{
+            let u_value = u_input.value.trim();
+
+            function validate(){
+                if(u_value === ""){
+                    err.textContent="Enter your name"
+                }
+            }
+            validate()
+
+
+            let ol = document.createElement("ol");
+            let li = document.createElement("li")
+            
+            let complete_btn = document.createElement("button")
+            complete_btn.textContent="Complete"
+            complete_btn.addEventListener("click",()=>{
+                li.style.textDecoration="line-through";
+            })
+            
+            let delate_btn = document.createElement("button")
+            delate_btn.textContent="Delete"
+            delate_btn.addEventListener("click",()=>{
+                li.remove();
+            })
+            console.log(complete_btn.getAttribute('id'));
+            
+
+            li.innerText= u_value;
+            li.setAttribute('value',`${count=count+1}`)
+            li.append(complete_btn)
+            li.append(delate_btn)
+            ol.appendChild(li)
+
+            document.body.append(ol);
+
+            
+        });
+
+
+    </script>
+</body>
+</html>
